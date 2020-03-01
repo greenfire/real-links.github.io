@@ -1,38 +1,38 @@
 <footer>
   <div class="footer-shape mt-5 mb-2">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-    	<path fill="currentColor" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
-    	c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
-    	c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
+      <path fill="currentColor" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
+      c23.6,2.1,48.7,3.5,103.4-2.5c54.7-6,106.2-25.6,106.2-25.6V0H0v30.3c0,0,72,32.6,158.4,30.5c39.2-0.7,92.8-6.7,134-22.4
+      c21.2-8.1,52.2-18.2,79.7-24.2C399.3,7.9,411.6,7.5,421.9,6.5z"></path>
     </svg>
   </div>
   <div class="footer-links">
-  	<div class="container d-flex flex-column justify-content-center align-items-center flex-sm-row justify-content-sm-between align-items-sm-start">
-  		<ul class="list-unstyled text-center text-sm-left mb-5 mb-sm-0">
-  			{% for link in site.footer.left -%}
-  			{% if link.divider %}
-  			<li><hr/></li>
-  			{% else %}
-  			<li><a href="{{ link.href }}">{{ link.label }}</a></li>
-  			{%- endif -%}
-  			{%- endfor -%}
-  		</ul>
-  		<ul class="list-unstyled text-center">
-  			<li><p><strong>Follow Us</strong></p></li>
-  			<li>
-  				<ul class="list-unstyled mb-5 d-flex flex-row justify-content-center align-items-center" style="height:60px;">
-  					{% for link in site.footer.right -%}
-  					<li>
-  						<a class="icon-svgs" href="{{ link.href }}" target="_blank">
-  							{% include icon-blob.svg %}
-  							{% include {{ link.icon }}.svg %}
-  						</a>
-  					</li>
-  					{%- endfor -%}
-  				</ul>
-  			</li>
-  			<li class="copyright">&copy; Copyright {{ "now" | date: "%Y" }} Real Links</li>
-  		</ul>
-  	</div>
+    <div class="container d-flex flex-column justify-content-center align-items-center flex-sm-row justify-content-sm-between align-items-sm-start">
+      <ul class="list-unstyled text-center text-sm-left mb-5 mb-sm-0">
+        {% for link in site.footer.left -%}
+        {% if link.divider %}
+        <li><hr/></li>
+        {% else %}
+        <li><a href="{{ link.href }}">{{ link.label }}</a></li>
+        {%- endif -%}
+        {%- endfor -%}
+      </ul>
+      <ul class="list-unstyled text-center">
+        <li><p><strong>Follow Us</strong></p></li>
+        <li>
+          <ul class="list-unstyled mb-5 d-flex flex-row justify-content-center align-items-center" style="height:60px;">
+            {% for link in site.footer.right -%}
+            <li>
+              <a class="icon-svgs" href="{{ link.href }}" target="_blank">
+                {% include icon-blob.svg %}
+                {% include {{ link.icon }}.svg %}
+              </a>
+            </li>
+            {%- endfor -%}
+          </ul>
+        </li>
+        <li class="copyright">&copy; Copyright {{ "now" | date: "%Y" }} Real Links</li>
+      </ul>
+    </div>
   </div>
 </footer>

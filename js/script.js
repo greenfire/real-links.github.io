@@ -31,17 +31,17 @@
   });
 
   function startLoadQueue() {
-		// If any new loadQueue calls hit the array, automatically execute them
-		window.loadQueue.push = function(c) { c(); };
+    // If any new loadQueue calls hit the array, automatically execute them
+    window.loadQueue.push = function(c) { c(); };
 
-		// Run through each function in the loadQueue and execute them
-		(Array.isArray(window.loadQueue) ? window.loadQueue : [])
-			.filter(function (fn) { return typeof fn === 'function' })
-			.forEach(function (fn) { fn(); });
+    // Run through each function in the loadQueue and execute them
+    (Array.isArray(window.loadQueue) ? window.loadQueue : [])
+      .filter(function (fn) { return typeof fn === 'function' })
+      .forEach(function (fn) { fn(); });
   }
 
-	// IE
+  // IE
   if (document.readyState !== 'loading') startLoadQueue();
-	// Everyone else
+  // Everyone else
   else document.addEventListener('DOMContentLoaded', startLoadQueue);
 })();

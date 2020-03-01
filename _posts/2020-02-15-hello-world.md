@@ -24,10 +24,10 @@ If you’re interested in the construction of this blog then check out [the GitH
 For more information on Real Links, and how we can boost referral using technology & training, please check out our website:
 
 {% include embed.html
-		emoji="🚀"
-		title="Real Links"
-		description="Rocket-fuel your employee referral hires"
-		url="https://www.reallinks.io"
-		image="/img/2020-02-15-hello-world-2.png"%}
+    emoji="🚀"
+    title="Real Links"
+    description="Rocket-fuel your employee referral hires"
+    url="https://www.reallinks.io"
+    image="/img/2020-02-15-hello-world-2.png"%}
 
 [real-links-blog-repo]: https://github.com/real-links/real-links.github.io
