@@ -1,0 +1,32 @@
+<div class="col-12 col-sm-6 col-md-4 mb-5">
+	{% if include.post && include.post.url %}
+	<div class="card post-card w-100">
+		{% if include.post.image %}
+		<a href="{{ include.post.to | default: include.post.url }}"><img class="card-img-top" src="{{ include.post.image | relative_url }}"/></a>
+		{% endif %}
+		<div class="card-body">
+			{% if include.post.title %}
+			<h3 class="card-title"><a href="{{ include.post.to | default: include.post.url }}">{{ include.post.title }}</a></h3>
+			{% endif %}
+			{% if include.post.subtitle %}
+			<h4 class="card-subtitle mb-2 text-muted"><a href="{{ include.post.to | default: include.post.url }}">Card subtitle</a></h4>
+			{% endif %}
+			{% if include.post.excerpt %}
+			<p>{{ include.post.excerpt }}</p>
+			{% endif %}
+		</div>
+		<div class="card-footer">
+			<a class="d-flex justify-content-between align-items-center" href="{{ include.post.to | default: include.post.url }}">
+				{% if include.post.author && site.authors[include.post.author].name %}
+				<small class="text-muted">{{ site.authors[include.post.author].name }}</small>
+				{% elsif include.post.author %}
+				<small class="text-muted">{{ include.post.author }}</small>
+				{% else %}
+				<small class="text-muted">&nbsp;</small>
+				{% endif %}
+				<small class="text-muted">{{ include.post.date | date_to_long_string: "ordinal" }}</small>
+			</a>
+		</div>
+	</div>
+	{% endif %}
+</div>

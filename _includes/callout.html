@@ -1,0 +1,18 @@
+{% if include.text %}
+<div class="callout-block my-3 p-3 bg-light rounded d-flex flex-row align-item-start">
+	<div class="icon mr-2 mr-sm-1" style="width:30px">
+		{% if include.url %}
+		<a href="{{ include.url }}">{{ include.emoji }}</a>
+		{% else %}
+		{{ include.emoji }}
+		{% endif %}
+	</div>
+	<div class="text">
+		{% if include.url %}
+		<a href="{{ include.url }}">{{ include.text }}</a>
+		{% else %}
+		{{ include.text }}
+		{% endif %}
+	</div>
+</div>
+{% endif %}

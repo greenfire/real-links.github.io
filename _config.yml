@@ -1,0 +1,34 @@
+baseurl: ''
+exclude: [ 'README.md' ]
+permalink: /:year/:title.html
+
+title: Real Links Engineering
+authors:
+  jdrydn:
+    name: James
+    title: CTO
+  nagyszem22:
+    name: Márton
+    title: Software Engineer
+  sahil:
+    name: Sahil
+    title: Head of Marketing
+
+footer:
+  left:
+    - href: /
+      label: All Posts
+    - divider: true
+    - href: https://www.reallinks.io/
+      label: Home
+    - href: https://www.reallinks.io/how-it-works/
+      label: How It Works
+    - href: https://www.reallinks.io/company/
+      label: Company
+  right:
+    - href: https://twitter.com/reallinksio/
+      icon: icon-twitter
+    - href: https://linkedin.com/company/real-links/
+      icon: icon-linkedin
+    - href: https://github.com/real-links/
+      icon: icon-github

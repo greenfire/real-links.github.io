@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<section class="container-fluid">
+  <div class="row">
+    <article class="col-12 col-sm-10 offset-sm-1 post">
+
+      <div class="text-center">
+        <h1>{{ page.title }}</h1>
+        <p>
+          <small class="text-muted">
+            {% if page.author and site.authors[page.author].name %}
+            {{ site.authors[page.author].name }} -
+            {% elsif page.author %}
+            {{ page.author }} -
+            {% endif %}
+            {{ page.date | date_to_long_string: "ordinal" }}
+          </small>
+        </p>
+      </div>
+
+      {% if page.image %}
+      <img src="{{ page.image }}"/>
+      {% endif %}
+
+      {{content}}
+
+    </article>
+  </div>
+</section>

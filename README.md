@@ -1,3 +1,5 @@
-# real-links.github.io
+# real-links-blog
 
-![Real Links](./Screenshot.png)
+Engineering blog for Real Links
+
+Built using [Jekyll](https://jekyllrb.com).

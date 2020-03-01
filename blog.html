@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<div class="page-content">
+  <div class="wrapper">
+    <div class="teaserimage">
+      <div class="teaserimage-image" style="background-image: url({{ site.cover | relative_url }})"></div>
+    </div>
+
+    <header class="blog-header">
+      <div class="blog-logo" style="background-image: url('{{ site.authors.james.image | relative_url }}')">jdrydn</div>
+      <h1 class="blog-title">James D</h1>
+    </header>
+
+    <section class="content" role="main">
+      <div class="container featured">
+
+        <article class="post">
+          <div class="article-item">
+            <section class="post-excerpt">
+              {{ site.tagline | markdownify }}
+              {{ site.description | markdownify }}
+            </section>
+          </div>
+        </article>
+
+        {% for post in site.posts -%}
+        {%- unless post.homepage == false -%}
+        {%- assign latest = post -%}
+        {%- break -%}
+        {%- endunless -%}
+        {%- endfor -%}
+        <article class="post">
+          <div class="article-item">
+            <header class="post-header">
+              <h2 class="post-title"><a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></h2>
+            </header>
+            <section class="post-excerpt"><p><em>{{ latest.excerpt | strip_html }}</em></p></section>
+            <div class="post-meta">
+              <a href="{{ latest.url | relative_url }}">Read more &raquo;</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="post-meta">
+          <a href="{{ '/posts.html' | relative_url }}">All Posts</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
