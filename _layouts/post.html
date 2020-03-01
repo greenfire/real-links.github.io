@@ -19,11 +19,18 @@ layout: default
         </p>
       </div>
 
-      {% if page.image %}
-      <img src="{{ page.image }}"/>
+      {% if page.image and page.image-caption %}
+      <figure class="figure">
+        <img class="figure-img img-fluid rounded" src="{{ page.image }}"/>
+        <figcaption class="figure-caption text-right">{{ page.image-caption | markdownify }}</figcaption>
+      </figure>
+      {% elsif page.image %}
+      <img class="img-fluid rounded mb-3" src="{{ page.image }}"/>
       {% endif %}
 
-      {{content}}
+      <div class="markdown-content">
+        {{content}}
+      </div>
 
     </article>
   </div>

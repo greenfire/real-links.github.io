@@ -2,6 +2,7 @@
 layout: post
 title: Hello, world!
 image: /img/2020-02-15-hello-world-1.jpeg
+image-caption: '[Lego Movie](https://www.imdb.com/title/tt1490017/)'
 author: jdrydn
 ---
 
@@ -13,12 +14,10 @@ Topics in the future you can expect to read about:
 
 - Building a product GraphQL-first.
 - End-to-end testing with Cypress.
-- Server-side rendering with Vue.
-- Building Administration with Cognito.
+- Vue Server-Side Rendering.
+- Cognito & building Administration.
 
-There are also a few utilities in our codebase that we are going to abstract out & share with the community - useful tricks & shortcuts - around form generation, control flow & error handling.
-
-We’re also going to link to other articles that we found useful, optionally with some commentary. Stay tuned!
+There are also a few utilities in our codebase that we are going to abstract out & share with the community - including useful tricks & shortcuts around form generation, control flow & error handling. We’re also going to link to other articles that we found useful whilst building our product, optionally with some commentary. Stay tuned!
 
 If you’re interested in the construction of this blog then check out [the GitHub repo][real-links-blog-repo] - it’s all open source!
 
