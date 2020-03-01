@@ -3,6 +3,8 @@ exclude: [ 'README.md' ]
 permalink: /:year/:title.html
 
 title: Real Links Engineering
+url: https://real-links.github.io
+
 authors:
   jdrydn:
     name: James
