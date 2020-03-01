@@ -1,6 +1,7 @@
 ---
 ---
 @import "bootstrap/bootstrap";
+@import "highlight-monokai";
 
 $white: #fff;
 $rl-deep-blue: #4453a6;
@@ -80,6 +81,10 @@ header {
 
 		max-height: 600px;
 		max-width: 100%;
+	}
+
+	.highlight > pre {
+		padding: 1rem;
 	}
 }
 
