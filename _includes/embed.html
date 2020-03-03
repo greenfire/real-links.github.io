@@ -1,5 +1,3 @@
-{% if include.url %}
-{%- assign color = include.color | default: "light" -%}
 <div class="embed-block my-3 bg-{{ include.bg-color | default: 'light' }} text-{{ include.text-color | default: 'body' }} rounded d-flex flex-row">
   <div class="icon pt-3 pl-3 r-2 mr-sm-1" style="width:30px">
     {{ include.emoji }}
@@ -7,10 +5,9 @@
   <div class="flex-fill p-3 d-flex flex-column justify-content-start align-items-start">
     {% if include.title %}<p><strong>{{ include.title }}</strong></p>{% endif %}
     {% if include.description %}<p>{{ include.description }}</p>{% endif %}
-    <small><a href="{{ include.url }}">{{ include.url | remove: "https://" | remove: "http://" | split: "/" | first }}</a></small>
+    <small><a href="{{ include.url | default: '#' }}">{{ include.url | remove: "https://" | remove: "http://" | split: "/" | first }}</a></small>
   </div>
   {% if include.image %}
   <img class="fluid m-0" src="{{ include.image }}"/>
   {% endif %}
 </div>
-{% endif %}
